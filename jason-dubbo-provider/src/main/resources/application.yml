@@ -1,0 +1,32 @@
+
+spring:
+  datasource:
+    hikari:
+      username: root
+      password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/boot?useUnicode=true&amp;characterEncoding=utf8;allowMultiQueries=true&&useSSL=true
+    profiles:
+        active: dev
+    mybatis:
+        #mapper-locations: classpath*:mappers/**/*.xml
+        #config-location: classpath:mybatis-config.xml
+        type-aliases-package: com.jason.dubbo.provider.api.entity
+    logging:
+      config: classpath:log4j2.xml
+server:
+  port: 8888
+
+dubbo:
+  scan:
+    base-packages: com.jason.dubbo.provider.service.impl
+  application:
+    name: provider
+  registry:
+        address: zookeeper://192.168.1.100:2181
+        check: false
+  protocol:
+    name: dubbo
+    port: 20880
+    id: dubbo
+
