@@ -2,6 +2,7 @@ package com.jason.webflux.mongodb.controller;
 
 import com.jason.webflux.mongodb.entity.User;
 import com.jason.webflux.mongodb.service.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
@@ -14,6 +15,7 @@ import reactor.core.publisher.Mono;
  */
 @RestController
 @RequestMapping("/user")
+@Slf4j
 public class UserController {
 
     @Autowired
