@@ -30,9 +30,9 @@ public class UserServiceTest {
 
     @Test
     public void findByUsername() {
-        WebClient webClient = WebClient.create("http://localhost:8080");   // 1
+        WebClient webClient = WebClient.create("http://localhost:8082");   // 1
         Mono<String> resp = webClient
-                .get().uri("/hello") // 2
+                .get().uri("/user") // 2
                 .retrieve() // 3
                 .bodyToMono(String.class);  // 4
         resp.subscribe(System.out::println);    // 5
