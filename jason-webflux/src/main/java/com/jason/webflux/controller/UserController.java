@@ -3,7 +3,10 @@ package com.jason.webflux.controller;
 import com.jason.webflux.entity.User;
 import com.jason.webflux.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Mono;
 
 /**
@@ -18,12 +21,12 @@ public class UserController {
     private UserRepository userRepository;
 
     @RequestMapping("/save")
-    public Mono<User> save(@RequestBody User user){
+    public Mono<User> save(@RequestBody User user) {
         return userRepository.save(user);
     }
 
     @RequestMapping("/{username}")
-    public Mono<User> save(@PathVariable(value = "username") String username){
+    public Mono<User> save(@PathVariable(value = "username") String username) {
         return userRepository.findByUsername(username);
     }
 }
