@@ -10,3 +10,12 @@
 
 - （知乎）有前途 react模式虽然效率高 但调试难开发难 对业务线开发要求较高，我们架构组到时用的多，做网关 做API聚合一类的需求，建议楼主学习了解 但不要在业务代码里用，因为目前还没有react的数据库client 不过已经有redis和MongoDB的
 
+> 想要对webflux快速入门学习，首先需要对java8的一些新表达式了解，
+包括lambda表达式和Stream流这块的新写法。
+
+```xml
+<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+        </dependency>
+```
