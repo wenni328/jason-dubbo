@@ -25,4 +25,10 @@ public class UserRouter {
         return route(GET("/time"), userHandle::getTime)
                 .andRoute(GET("/date"), userHandle::getDate);
     }
+
+//    @Bean
+//    public RouterFunction<ServerResponse> user() {
+//        return route(GET("/add"), userHandle::add)
+//                .andRoute(GET("/date"), userHandle::getDate);
+//    }
 }
