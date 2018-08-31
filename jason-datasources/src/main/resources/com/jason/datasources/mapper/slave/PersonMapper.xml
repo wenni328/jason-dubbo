@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.jason.datasources.mapper.slave.PersonMapper">
+
+    <select id="getById" resultType="com.jason.datasources.entity.slave.Person" parameterType="Integer">
+        select * from person where id=#{id}
+    </select>
+</mapper>
