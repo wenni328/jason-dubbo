@@ -1,5 +1,5 @@
 # 解说
-- springboot2.0.4版本整合dubbo2.6.2，采用的是dubbo-spring-boot-starter
+- springboot2.0.4版本整合dubbo2.6.2+mybatis，采用的是dubbo-spring-boot-starter
 
 - 实体与接口做了分离（避免单机上会认为实现和接口是一起的），最终生产者和
 消费者都依赖于api.
