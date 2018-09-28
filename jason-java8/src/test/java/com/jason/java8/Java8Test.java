@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author: xieyong
@@ -58,7 +59,16 @@ public class Java8Test {
                 .filter((o)->(o.getSex().equals("man")))
                 //.limit(2)//输出数量
                 .forEach((o) -> System.out.println(o.getName()+"："+o.getMoney()));
-
     }
 
+    @Test
+    public void testA(){
+        String waibu = "lambda :";
+        List<String> proStrs = Arrays.asList(new String[]{"Ni","Hao","Lambda"});
+        List<String> execStrs = proStrs.stream().map(chuandi -> {
+            Long zidingyi = System.currentTimeMillis();
+            return waibu + chuandi + " -----:" + zidingyi;
+        }).collect(Collectors.toList());
+        execStrs.forEach(System.out::println);
+    }
 }
