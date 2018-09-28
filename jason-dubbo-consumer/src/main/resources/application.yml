@@ -11,7 +11,7 @@ dubbo:
   application:
     name: consumer
   registry:
-        address: zookeeper://192.168.1.100:2181
+        address: zookeeper://localhost:2181
         check: false
   protocol:
     name: dubbo
