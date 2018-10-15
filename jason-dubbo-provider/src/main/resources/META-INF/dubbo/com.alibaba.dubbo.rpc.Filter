@@ -1,0 +1,2 @@
+dubboRpcServiceFilter=com.jason.dubbo.provider.filter.DubboRpcConsumerFilter
+dubboRpcConsumerFilter=com.jason.dubbo.provider.filter.DubboRpcServiceFilter
