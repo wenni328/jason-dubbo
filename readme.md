@@ -7,7 +7,7 @@
 - 使用dubboadmin观察生产者和消费者服务状态
 
 - 本例使用了mybatis和mysql数据库
-- 大傻逼
+
 - log4j2日志配置记录
 
 ```xml
